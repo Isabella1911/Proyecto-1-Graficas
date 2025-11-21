@@ -1,6 +1,6 @@
 use raylib::prelude::*;
-use crate::player::Player;
-use crate::maze::Maze;
+use crate::entities::Player;
+use crate::raycasting::Maze;
 
 pub fn process_events(
     window: &RaylibHandle,

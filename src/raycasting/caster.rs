@@ -1,8 +1,8 @@
 use raylib::color::Color;
-use crate::framebuffer::Framebuffer;
-use crate::player::Player;
-use crate::maze::Maze;
-use crate::intersect::Intersect;
+use crate::renderer::framebuffer::Framebuffer;
+use crate::entities::player::Player;
+use crate::raycasting::maze::Maze;
+use crate::raycasting::intersect::Intersect;
 
 pub fn cast_ray(
     maze: &Maze,

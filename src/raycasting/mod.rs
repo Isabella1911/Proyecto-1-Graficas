@@ -3,7 +3,5 @@ pub mod line;
 pub mod intersect;
 pub mod maze;
 
-pub use caster::Caster;
-pub use line::Line;
-pub use intersect::IntersectResult; // cambia al nombre real
+pub use intersect::Intersect;
 pub use maze::Maze;

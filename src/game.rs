@@ -1,11 +1,11 @@
-use crate::framebuffer::Framebuffer;
-use crate::player::Player;
-use crate::maze::{self, find_player_start, load_maze, print_maze};
+use crate::renderer::framebuffer::Framebuffer;
+use crate::entities::player::Player;
+use crate::raycasting::maze::{self, find_player_start, load_maze, print_maze};
 use crate::input::process_events;
 use crate::renderer::{render_world_2d, render_world_3d, draw_sprite_billboard};
-use crate::texture::TextureManager;
-use crate::enemy::{Enemy, distance};
-use crate::caster::is_blocked_by_wall;
+use crate::renderer::texture::TextureManager;
+use crate::entities::enemy::{Enemy, distance};
+use crate::raycasting::caster::is_blocked_by_wall;
 use crate::audio::Audio;
 
 use raylib::prelude::*;

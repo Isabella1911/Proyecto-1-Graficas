@@ -1,7 +1,7 @@
 use raylib::math::Vector2;
-use crate::player::Player;
-use crate::maze::Maze;
-use crate::caster::is_blocked_by_wall;
+use crate::entities::player::Player;
+use crate::raycasting::maze::Maze;
+use crate::raycasting::caster::is_blocked_by_wall;
 
 #[derive(Clone)]
 pub struct Enemy {

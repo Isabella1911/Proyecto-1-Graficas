@@ -1,4 +1,5 @@
 use raylib::math::Vector2;
+use crate::raycasting::maze::Maze;
 
 pub struct Player {
     pub pos: Vector2,
@@ -17,13 +18,13 @@ impl Player {
         }
     }
 
-    pub fn move_forward(&mut self, distance: f32, maze: &super::maze::Maze) -> bool {
+    pub fn move_forward(&mut self, distance: f32, maze: &Maze) -> bool {
         let new_x = self.pos.x + distance * self.a.cos();
         let new_y = self.pos.y + distance * self.a.sin();
         self.try_move(new_x, new_y, maze)
     }
 
-    pub fn move_backward(&mut self, distance: f32, maze: &super::maze::Maze) -> bool {
+    pub fn move_backward(&mut self, distance: f32, maze: &Maze) -> bool {
         let new_x = self.pos.x - distance * self.a.cos();
         let new_y = self.pos.y - distance * self.a.sin();
         self.try_move(new_x, new_y, maze)
@@ -38,7 +39,7 @@ impl Player {
     }
 
     /// Retorna true si tocó '$' o 'E' (según el nivel).
-    pub fn try_move(&mut self, new_x: f32, new_y: f32, maze: &super::maze::Maze) -> bool {
+    pub fn try_move(&mut self, new_x: f32, new_y: f32, maze: &Maze) -> bool {
         let steps = 6;
         let dx = (new_x - self.pos.x) / steps as f32;
         let dy = (new_y - self.pos.y) / steps as f32;

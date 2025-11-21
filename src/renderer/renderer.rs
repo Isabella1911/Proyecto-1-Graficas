@@ -1,6 +1,9 @@
 use raylib::color::Color;
 use raylib::math::Vector2;
 
+pub mod framebuffer;
+pub mod texture;
+
 use crate::renderer::framebuffer::Framebuffer;
 use crate::renderer::texture::TextureManager;
 use crate::entities::player::Player;

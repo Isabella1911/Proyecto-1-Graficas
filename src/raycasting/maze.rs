@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use raylib::prelude::*;
-use crate::framebuffer::Framebuffer;
+use crate::renderer::framebuffer::Framebuffer;
 
 pub type Maze = Vec<Vec<char>>;
 

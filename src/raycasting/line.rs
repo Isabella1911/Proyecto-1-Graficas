@@ -1,4 +1,4 @@
-use crate::framebuffer::Framebuffer;
+use crate::renderer::framebuffer::Framebuffer;
 use raylib::prelude::*;
 
 pub fn line(framebuffer: &mut Framebuffer, start: Vector2, end: Vector2) {
